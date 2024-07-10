@@ -153,7 +153,7 @@ div button {
 
 
 main {
-    padding: 2rem;
+    padding-bottom: 2rem;
 }
 
 .grid-container {
@@ -207,7 +207,7 @@ main {
 }
 
 .text-content {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 0rem;
     flex: 1;
 }
 
