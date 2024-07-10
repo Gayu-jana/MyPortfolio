@@ -141,6 +141,7 @@ div p {
 
 div button {
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #573CFA;
     color: #fff;
     border: none;
