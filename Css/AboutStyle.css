@@ -162,7 +162,7 @@ div button {
 } */
 
 main {
-    padding: 2rem;
+    padding-bottom: 2rem;
 }
 
 .grid-container {
@@ -339,6 +339,7 @@ footer p{
     cursor: pointer;
     color: #000;
     background-color: #fff;
+    padding: 0 !important;
 }
 
 .Hobby{
