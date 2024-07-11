@@ -32,6 +32,7 @@ window.onclick = function(event) {
     closePopupOnClickOutside(event, 'popup-p10', 'popup-overlay-p10');
     closePopupOnClickOutside(event, 'popup-p11', 'popup-overlay-p11');
     closePopupOnClickOutside(event, 'popup-p12', 'popup-overlay-p12');
+    closePopupOnClickOutside(event, 'popup-p13', 'popup-overlay-p13');
     closePopupOnClickOutside(event, 'popup-drawing', 'popup-overlay-drawing');
 };
 
@@ -52,7 +53,7 @@ function closePopupOnClickOutside(event, popupId, overlayId) {
 }
 
 function closePopup() {
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= 13; i++) {
         document.getElementById('popup-p' + i).style.display = 'none';
         document.getElementById('popup-overlay-p' + i).style.display = 'none';
     }
