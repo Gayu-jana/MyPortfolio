@@ -84,3 +84,60 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll('.grid-item video');
+
+    videos.forEach(video => {
+        video.addEventListener('mouseenter', () => {
+            video.play(); // Play video on hover
+        });
+
+        video.addEventListener('mouseleave', () => {
+            video.pause(); // Pause video when mouse leaves
+            video.currentTime = 0; // Optional: reset video to start
+        });
+    });
+});
+
+// Get the popup elements
+var videoPopup = document.getElementById('video-popup');
+var popupVideo = document.getElementById('popup-video');
+var popupSource = document.getElementById('popup-source');
+var closeBtn = document.getElementById('close-popup');
+
+// Get all video items
+var videoItems = document.querySelectorAll('.video-item video');
+
+// Add click event listener to each video
+videoItems.forEach(function(videoItem) {
+    videoItem.addEventListener('click', function() {
+        // Get the source of the clicked video
+        var videoSrc = videoItem.querySelector('source').getAttribute('src');
+        
+        // Update the source in the popup video
+        popupSource.setAttribute('src', videoSrc);
+        popupVideo.load(); // Load the new video source
+        popupVideo.play(); // Play the video
+
+        // Show the popup
+        videoPopup.style.display = 'flex';
+    });
+});
+
+// Close popup
+closeBtn.addEventListener('click', function() {
+    videoPopup.style.display = 'none';
+    popupVideo.pause();
+    popupVideo.currentTime = 0;
+});
+
+// Optional: Close popup when clicking outside the video content
+window.addEventListener('click', function(event) {
+    if (event.target == videoPopup) {
+        videoPopup.style.display = 'none';
+        popupVideo.pause();
+        popupVideo.currentTime = 0;
+    }
+});
+
