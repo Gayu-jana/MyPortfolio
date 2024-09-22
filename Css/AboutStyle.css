@@ -118,6 +118,19 @@ header {
     color: transparent;
 }
 
+.hero-image {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px; 
+}
+
 .hero-image img {
     max-width: 100%;
     height: auto;
@@ -167,7 +180,7 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -210,7 +223,7 @@ main {
     flex-direction: row;
     align-items: center;
     overflow: hidden;
-    max-width: 1200px;
+    max-width: 1600px;
     margin-bottom: 30px;
 }
 
