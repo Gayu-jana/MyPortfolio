@@ -1,3 +1,4 @@
+<!--Current Portfolio Design - FIgma file for this portfolio project-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gayathri's Portfolio</title>
     <link rel="icon" type="image/png" href="Images/Profile/MyPhoto.png">
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="Css/styles.css">
     <script src="Js/script.js" defer></script>
 </head>
@@ -64,6 +66,69 @@
                 </div>
             </div>
         </main>
+        <div class="project">
+            <h1><span>Animations</span></h1>
+            <p>Micro-interactions use subtle animations to enhance user engagement and make interactions more intuitive.</p>
+        </div>
+        <main>
+            <div class="video-gallery">
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/1.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/2.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/3.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/4.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/5.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/6.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/7.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/8.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video id="my-video" class="video-js vjs-default-skin" controls width="500" preload="metadata">
+                        <source src="Images/Animation/9.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        </main>       
+        <!--Video popup start--> 
+        <div id="video-popup" class="video-popup">
+            <div class="video-popup-content">
+                <span class="close-btn" id="close-popup">&times;</span>
+                <video id="popup-video" class="video-js vjs-default-skin" controls preload="metadata" width="900">
+                    <source src="" type="video/mp4" id="popup-source" />
+                </video>
+            </div>
+        </div>
+        <!--Video popup end--> 
         <div class="project">
             <h1>Reimagined Creations: The Latest in <span>My Design Journey</span></h1>
             <p>Check out my latest projects! I've given these works a new look, blending creativity with usability. Dive in and see the transformation!</p>
@@ -241,6 +306,36 @@
         </div>
         <button class="View-More-Button" id="View-More-Button" onclick="ShowAllProjects()">View More</button>
         <button class="View-Less-Button" id="View-Less-Button" onclick="ShowLessProjects()">View Less</button>
+        <div class="project">
+            <h1><span>Poster Design</span></h1>
+            <p>Bringing bold concepts to life with designs that speak to your audience. Our work combines creativity and strategy to make your brand unforgettable.</p>
+        </div>
+        <main>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="Images/Poster/1.png" alt="1">
+                </div>
+                <div class="grid-item">
+                    <img src="Images/Poster/2.png" alt="2">
+                </div>
+                <div class="grid-item">
+                    <img src="Images/Poster/3.png" alt="3">
+                </div>
+                <div class="grid-item">
+                    <img src="Images/Poster/4.png" alt="4">
+                </div>
+                <div class="grid-item">
+                    <img src="Images/Poster/5.png" alt="5">
+                </div>
+                <div class="grid-item">
+                    <img src="Images/Poster/6.png" alt="6">
+                </div>
+                <div class="grid-item">
+                    <img src="Images/Poster/7.png" alt="7">
+                </div>
+            </div>
+        </main>
+        <hr><br>
         <div>
             <main>
                 <div class="grid-container">
@@ -253,9 +348,6 @@
                     <div class="grid-item">
                         <img src="Images/Grid-img-6.png" alt="App 2">
                     </div>
-                </div>
-                <br>
-                <div class="grid-container">
                     <div class="grid-item">
                         <img src="Images/Grid-img-3.png" alt="App 1">
                     </div>
@@ -630,5 +722,24 @@
         </div>
         <p>&copy; 2024</p>
     </footer>
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videos = document.querySelectorAll('.video-item video');
+
+            videos.forEach(video => {
+                const player = videojs(video); // Initialize Video.js player
+
+                video.addEventListener('mouseenter', () => {
+                    player.play(); // Play video on hover
+                });
+
+                video.addEventListener('mouseleave', () => {
+                    player.pause(); // Pause video when mouse leaves
+                    player.currentTime(0); // Reset video to start
+                });
+            });
+        });
+    </script>
 </body>
 </html>
