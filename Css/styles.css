@@ -383,7 +383,7 @@ footer p{
 
 .video-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 4rem;
     align-items: center;
     margin-bottom: 1rem;
@@ -394,8 +394,7 @@ footer p{
 }
 
 .video-item video {
-    width: 100%;
-    box-shadow: 0 rgba(0, 0, 0, 0.1);
+    width: 500 !important;
 }
 
 /* Video Popup */
@@ -445,6 +444,10 @@ footer p{
     .social {
         display: none;
     }
+    .video-item video {
+        width: 350 !important;
+    }
+    
 
     .Content{
         margin: 20px 30px 0 30px;
@@ -515,5 +518,12 @@ footer p{
         border-radius: 0;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
     }
 }
